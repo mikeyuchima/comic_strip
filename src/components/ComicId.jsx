@@ -13,6 +13,7 @@ class ComicId extends Component {
           date={this.props.comicData.date}
           issue={this.props.comicData.issue}
           img={this.props.comicData.img}
+          transcript={this.props.comicData.transcript}
           prevComic={this.props.nextComic}
           nextComic={this.props.nextComic}
           randComic={this.props.nextComic}

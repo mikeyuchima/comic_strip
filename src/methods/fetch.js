@@ -31,6 +31,7 @@ const parseData = json => {
     date: `${json.day}/${json.month}/${json.year}`,
     issue: json.num,
     title: json.title,
-    img: json.img
+    img: json.img,
+    transcript: json.transcript.split(/[^a-zA-Z\d ?.:'!]/).join(" ")
   };
 };

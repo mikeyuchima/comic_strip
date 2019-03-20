@@ -3,8 +3,8 @@ import "./App.css";
 import Strip from "./components/Strip";
 import { getCurrentStrip, getNextStrip } from "./methods/fetch";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Comic from "./Comic";
-import ComicId from "./ComicId";
+import Comic from "./components/Comic";
+import ComicId from "./components/ComicId";
 
 class App extends Component {
   constructor() {
@@ -80,6 +80,7 @@ class App extends Component {
                 date={this.state.comicData.date}
                 issue={this.state.comicData.issue}
                 img={this.state.comicData.img}
+                transcript={this.state.comicData.transcript}
                 prevComic={this.nextComic}
                 nextComic={this.nextComic}
                 randComic={this.nextComic}
