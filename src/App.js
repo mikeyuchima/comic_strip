@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import Strip from "./components/Strip";
 import { getCurrentStrip, getNextStrip } from "./methods/fetch";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Comic from "./components/Comic";
