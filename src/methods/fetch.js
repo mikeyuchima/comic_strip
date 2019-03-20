@@ -1,5 +1,5 @@
 export const getCurrentStrip = new Promise((res, rej) => {
-  fetch("/info.0.json")
+  fetch("https://xkcd.com/info.0.json")
     .then(response => {
       return response.json();
     })
@@ -13,7 +13,7 @@ export const getCurrentStrip = new Promise((res, rej) => {
 
 export const getNextStrip = issue =>
   new Promise((res, rej) => {
-    fetch("/" + issue + "/info.0.json")
+    fetch("https://xkcd.com/" + issue + "/info.0.json")
       .then(response => {
         return response.json();
       })
