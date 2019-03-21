@@ -16,7 +16,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log("componentdidmount");
     getCurrentStrip.then(comicData => {
       this.setState({
         comicData,
@@ -62,10 +61,8 @@ class App extends Component {
     }
   };
 
-  Comic = ({ match }) => {
-    console.log("COMIC", match.params.id);
-    this.getComic(match.params.id);
-  };
+  Comic = ({ match }) => this.getComic(match.params.id);
+
   render() {
     return (
       <BrowserRouter>
