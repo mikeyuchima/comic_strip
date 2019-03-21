@@ -4,6 +4,7 @@ import { getCurrentStrip, getNextStrip } from "./methods/fetch";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Comic from "./components/Comic";
 import ComicId from "./components/ComicId";
+import NoMatch from "./components/NoMatch";
 
 class App extends Component {
   constructor() {
@@ -105,9 +106,3 @@ class App extends Component {
 }
 
 export default App;
-
-const NoMatch = () => (
-  <div>
-    <h1>DOES NOT EXISTS</h1>
-  </div>
-);
