@@ -1,5 +1,6 @@
 import React from "react";
 import Strip from "./Strip";
+import { Link } from "react-router-dom";
 
 const Comic = props => (
   <div className="App">
@@ -10,14 +11,19 @@ const Comic = props => (
       img={props.img}
       transcript={props.transcript}
     />
-    <button type="button" onClick={props.prevComic} value="previous">
-      Previous
+    <button type="button">
+      <Link to={`/${props.currentIssue - 1}`}>Previous</Link>
     </button>
-    <button type="button" onClick={props.randComic} value="random">
-      Random
+    <button type="button" value="random">
+      <Link
+        to={`/${Math.floor(Math.random() * Math.floor(props.latestIssue - 1)) +
+          1}`}
+      >
+        Random
+      </Link>
     </button>
-    <button type="button" onClick={props.nextComic} value="next">
-      Next
+    <button type="button">
+      <Link to={`/${props.currentIssue + 1}`}>Next</Link>
     </button>
   </div>
 );

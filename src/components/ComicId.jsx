@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import Comic from "./Comic";
 
 class ComicId extends Component {
-  componentDidMount() {
-    this.props.exactComic(this.props);
+  componentDidUpdate(prevProps) {
+    if (
+      parseInt(this.props.match.params.id) !== prevProps.currentIssue &&
+      this.props.match.params.id
+    ) {
+      this.props.exactComic(this.props);
+    }
   }
   render() {
     return (
@@ -14,9 +19,8 @@ class ComicId extends Component {
           issue={this.props.comicData.issue}
           img={this.props.comicData.img}
           transcript={this.props.comicData.transcript}
-          prevComic={this.props.nextComic}
-          nextComic={this.props.nextComic}
-          randComic={this.props.nextComic}
+          latestIssue={this.props.latestIssue}
+          currentIssue={this.props.currentIssue}
         />
       </div>
     );

@@ -1,6 +1,11 @@
+body {
+  background: url(./images/background.jpg) no-repeat 0px 0px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .App {
   text-align: center;
-  background: ghostwhite;
 }
 
 .Strip {
