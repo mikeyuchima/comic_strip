@@ -33,7 +33,6 @@ class App extends Component {
         let issueCounter = this.state.issueCounter;
         issueCounter[issue] = issueCounter[issue] + 1 || 1;
         this.setState({ comicData, currentIssue: issue, issueCounter });
-        console.log("state", comicData);
       })
       .catch(err => {
         console.error("Error", err);

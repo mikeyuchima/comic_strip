@@ -15,7 +15,7 @@ body {
 }
 
 #transcript {
-  width: 60%;
+  width: 70%;
   background: #fff;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -27,20 +27,38 @@ body {
 }
 
 .Description {
-  background: lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 59%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-button {
+.image-direction {
+  display: flex;
+  align-items: center;
+}
+.direction {
   border-width: 0;
   outline: none;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  height: 25px;
-  width: 75px;
+  height: 60px;
   margin: 2px;
 
   background-color: lightcoral;
   color: #ecf0f1;
+}
+
+.random {
+  color: #fff;
+  border-radius: 5px;
+  -webkit-transition: 25ms ease-out;
+  transition: 25ms ease-out;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #777777;
+  border-color: #777777;
 }
 
 button:hover {

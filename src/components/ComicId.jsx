@@ -3,6 +3,7 @@ import Comic from "./Comic";
 
 class ComicId extends Component {
   componentDidUpdate(prevProps) {
+    console.log(window.location.href);
     if (
       parseInt(this.props.match.params.id) !== prevProps.currentIssue &&
       this.props.match.params.id
@@ -21,6 +22,7 @@ class ComicId extends Component {
           transcript={this.props.comicData.transcript}
           latestIssue={this.props.latestIssue}
           currentIssue={this.props.currentIssue}
+          {...this.props}
         />
       </div>
     );
