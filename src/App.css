@@ -16,6 +16,10 @@ body {
 
 #transcript {
   width: 70%;
+  height: 250px;
+  overflow: scroll;
+  white-space: pre;
+  text-align: center;
   background: #fff;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);

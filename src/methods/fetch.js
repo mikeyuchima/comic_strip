@@ -34,6 +34,8 @@ const parseData = json => {
     issue: json.num,
     title: json.title,
     img: json.img,
-    transcript: json.transcript.split(/[^a-zA-Z\d ?.:'!]/).join("\n")
+    transcript: json.transcript
+      .split(/[^a-zA-Z\d ?.:'!@#$%^&*()-_=+|]/)
+      .join("\n")
   };
 };
